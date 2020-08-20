@@ -452,7 +452,7 @@ OAuthClient.prototype.validateIdToken = function validateIdToken(params = {}) {
   })
     .then((res) => {
       this.log('info', 'The validateIdToken () response is : ', JSON.stringify(res, null, 2));
-      if (res) return true;
+      if (res) return res;
       return false;
     })
     .catch((e) => {
